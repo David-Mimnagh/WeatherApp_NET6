@@ -1,0 +1,8 @@
+<div *ngIf="loggingIn" class="lds-ellipsis">
+  <p>Loading</p>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<p *ngIf="!loggingIn">{{ message | async }}</p>

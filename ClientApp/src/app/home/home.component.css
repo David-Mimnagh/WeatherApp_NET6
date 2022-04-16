@@ -1,0 +1,32 @@
+.home-container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-image {
+  width: 200px;
+  height: 80px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro-description {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.text-link {
+  color: #0094ff;
+}
+
+  .text-link:hover {
+    cursor: pointer;
+  }
+
+.footer {
+  line-height: 30px !important;
+}

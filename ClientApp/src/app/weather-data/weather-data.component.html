@@ -1,0 +1,50 @@
+
+<div class="page-intro-container">
+  <h1 id="page-title" class="page-title">Weather forecast</h1>
+  <div class="slider-container">
+    <p>Use Metric System</p>
+    <label class="switch" for="checkbox">
+      <input type="checkbox" id="checkbox" [(ngModel)]="useMetric" />
+      <div class="slider round"></div>
+    </label>
+  </div>
+  <p class="page-description">Enter a location to find the latest weather information</p>
+  <form class="main-form-container">
+    <div class="form-group">
+      <input #cityInput list="city-list" autocomplete="off" type="text" class="form-control-sm city-input" id="locationSearchInput" placeholder="Glasgow" value="" onkeypress="return event.keyCode != 13;">
+      <datalist id="city-list" role="listbox">
+        <option *ngFor="let city of citiesList" [value]="city.name">{{city.key}}</option>
+      </datalist>
+      <button class="btn btn-primary geo-location-btn" (click)="getCurrentLocation()" title="Use current location.">
+        <i class="fa-solid fa-location-dot"></i>
+      </button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="loading">
+  <div class="lds-ellipsis">
+    <p>Loading</p>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<div *ngIf="errorMessage" className="error-message-container">
+  <div className="page-title"> Error... <br/></div>
+  <div className="error-message">{{errorMessage}}</div>
+</div>
+
+<div class="forecast-breakdown" *ngIf="forecast">
+  <div class="forecast-breakdown-title">1 Day forecast for {{selectedCityName}} on {{forecast.date}}.</div>
+  <div class="forecast-breakdown-text">
+    <p class="forecast-breakdown-summary">{{forecast.summaryText}}</p>
+    <ul>
+      <li>Expect highs of {{forecast.temperatureMax}} and lows of {{forecast.temperatureMin}}.</li>
+      <li>With {{forecast.percipitation}}</li>
+      <li>Further information/forecasts can be found <a href="{{forecast.forecastLink}}" target="_blank">here</a>.</li>
+    </ul>
+  </div>
+</div>

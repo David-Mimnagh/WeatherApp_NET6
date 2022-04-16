@@ -1,0 +1,23 @@
+
+<div class="home-container">
+  <img src="../../assets/images/brady-logo.png" alt="brady-logo" class="logo-image">
+  <div class="intro">
+    <p>Welcome to the Brady Technologies Weather App!</p>
+    <p class="intro-description">
+      A simple program that will provide you with a day ahead forecast for a given location.
+    </p>
+    <br />
+    <div style="white-space: nowrap;" *ngIf="!(isAuthenticated | async)">
+      Please
+      <span class="text-link" [routerLink]='["/authentication/register"]'>Register</span> or
+      <span class="text-link" [routerLink]='["/authentication/login"]'>Login</span> to get started!
+    </div>
+    <div class="intro" *ngIf="isAuthenticated | async">
+      <p>Welcome {{ userName | async }}!</p>
+      <p>
+        Navigate to:
+        <a class="text-link" [routerLink]="['/GetWeatherInfo']">Get Weather Info</a>
+      </p>
+    </div>
+  </div>
+</div>

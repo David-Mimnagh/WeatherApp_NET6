@@ -1,0 +1,125 @@
+.geo-location-btn {
+  margin-left: -30px;
+  margin-bottom: 3px;
+}
+
+.error-message-container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.error-message {
+  font-style: italic;
+  text-align: center;
+}
+
+.error-message {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.page-intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-weight: bold;
+}
+
+.page-description {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.main-form-container {
+  width: 60%;
+}
+
+.form-group, .form-control-sm {
+  width: 100%;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.slider-container {
+  position: absolute;
+  margin-left: 65%;
+}
+
+  .slider-container p {
+    font-size: x-small;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
+
+.switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 34px;
+}
+
+  .switch input {
+    display: none;
+  }
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+  .slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 14px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 14px;
+  }
+
+input:checked + .slider {
+  background-color: #FAB600;
+}
+
+  input:checked + .slider:before {
+    transform: translateX(10px);
+  }
+
+.slider.round {
+  border-radius: 34px;
+}
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.forecast-breakdown {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast-breakdown-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.forecast-breakdown-summary {
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+

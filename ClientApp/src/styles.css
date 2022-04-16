@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.un {
+  transition: 500ms;
+  border-bottom: 2px solid transparent;
+}
+
+  .un:hover {
+    border-color: white;
+  }
+
+.btn-primary {
+  padding: 2px 7px;
+  color: #FFFFFF;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #FAB600;
+  background-color: #FAB600;
+}
+
+  .btn-primary:hover {
+    color: #FAB600;
+    border: 1px solid #FAB600;
+    background-color: transparent;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:focus {
+    color: #FFFFFF;
+    border: 1px solid #FAB600;
+    background-color: #FAB600;
+    box-shadow: 0 0 0 0.2rem rgb(250 182 0 / 50%)
+  }
+
+.form-control-sm {
+  border: 1px solid #FAB600;
+}
+
+input:focus-visible {
+  outline-color: #FAB600;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: slategrey;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: 47%;
+  margin-top: 25px;
+}
+
+  .lds-ellipsis p {
+    font-weight: bold;
+  }
+
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FAB600;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+
+    .lds-ellipsis div:nth-child(1) {
+      left: 8px;
+      animation: lds-ellipsis1 0.6s infinite;
+    }
+
+    .lds-ellipsis div:nth-child(2) {
+      left: 8px;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+
+    .lds-ellipsis div:nth-child(3) {
+      left: 32px;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+
+    .lds-ellipsis div:nth-child(4) {
+      left: 56px;
+      animation: lds-ellipsis3 0.6s infinite;
+    }
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}

@@ -1,0 +1,80 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.navbar-brand i {
+  margin-right: 10px;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+  .navbar-brand:hover, .navbar-brand:focus {
+    color: white;
+  }
+
+.navbar-custom-background {
+  background: linear-gradient(133deg, #64358b, #fac409);
+  background-size: 400% 400%;
+  -webkit-animation: GradientBackground 16s ease infinite;
+  -moz-animation: GradientBackground 16s ease infinite;
+  animation: GradientBackground 16s ease infinite;
+  -webkit-box-shadow: 0px 2px 6px 0px #64358b;
+  -moz-box-shadow: 0px 2px 6px 0px #64358b;
+  box-shadow: 0px 2px 6px 0px #64358b;
+}
+
+@-webkit-keyframes GradientBackground {
+  0% {
+    background-position: 0% 9%
+  }
+
+  50% {
+    background-position: 100% 92%
+  }
+
+  100% {
+    background-position: 0% 9%
+  }
+}
+
+@-moz-keyframes GradientBackground {
+  0% {
+    background-position: 0% 9%
+  }
+
+  50% {
+    background-position: 100% 92%
+  }
+
+  100% {
+    background-position: 0% 9%
+  }
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 9%
+  }
+
+  50% {
+    background-position: 100% 92%
+  }
+
+  100% {
+    background-position: 0% 9%
+  }
+}
