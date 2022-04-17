@@ -7,6 +7,8 @@ using WeatherApp_NET6.Models;
 using Azure.Identity;
 using Microsoft.Extensions.Configuration.AzureAppConfiguration;
 using WeatherApp_NET6.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,9 +24,14 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 
 builder.Services.AddIdentityServer()
     .AddApiAuthorization<ApplicationUser, ApplicationDbContext>();
-
 builder.Services.AddAuthentication()
-    .AddIdentityServerJwt();
+                    .AddIdentityServerJwt();
+builder.Services.Configure<JwtBearerOptions>(
+  IdentityServerJwtConstants.IdentityServerJwtBearerScheme,
+  options =>
+  {
+      options.Authority = builder.Configuration["AuthURL"];
+  });
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
